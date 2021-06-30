@@ -39,7 +39,7 @@ python test_flaskr.py
 ```
 ## API Reference
 ### Getting Started
-- Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, http://127.0.0.1:5000/, which is set as a proxy in the frontend configuration.
+- Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, ht&#8203;tp://127.0.0.1:5000/, which is set as a proxy in the frontend configuration.
 
 - Authentication: This version of the application does not require authentication or API keys.
 ### Error Handling
@@ -66,7 +66,7 @@ GET /questions
 General:
 - Returns a list of questions objects, categories , success value, and total number of questions
 - Results are paginated in groups of 10. 
-Sample: curl -X GET http://127.0.0.1:5000/questions
+- Sample: curl -X GET ht&#8203;tp://127.0.0.1:5000/questions
 ```
 {
       "categories": {
@@ -156,7 +156,7 @@ Sample: curl -X GET http://127.0.0.1:5000/questions
 GET /categories
 General:
 - Returns a list of categories objects and success value
-Sample: curl -X GET http://127.0.0.1:5000/categories
+- Sample: curl -X GET ht&#8203;tp://127.0.0.1:5000/categories
  ```
   {
       "categories": {
@@ -174,7 +174,7 @@ DELETE /questions/<int:id>
 General:
 - Deletes a question by id using url parameters.
 - Returns id of deleted question and success value.
-Sample: curl -X DELETE http://127.0.0.1:5000/questions/2 
+- Sample: curl -X DELETE ht&#8203;tp://127.0.0.1:5000/questions/2 
 
  ```
   {
@@ -187,21 +187,20 @@ General:
 - search for questions using search term in parameters or creates a new question
 - if search term is given, it returns a list of questions objects that has the search term,success value and the the number of total questions
 - if a new question parameters were given, it returns the new question id, the question and success value
-
-Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{ "question": "Who invented the electricity ?", "answer": "Benjamin Franklin", "difficulty": 3, "category": "4" }'
+- Sample: curl ht&#8203;tp://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{ "question": "Who invented the electricity ?", "answer": "Benjamin Franklin", "difficulty": 3, "category": "4" }'
  ```
 {
- 	'success': True,
-	'created': 24,
-	'question_created': Who invented the electricity ?
+   'success': True,
+   'created': 24,
+   'question_created': Who invented the electricity ?
 }
  ```
 
-Sample: curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"searchTerm": "movie"}'
+- Sample: curl ht&#8203;tp://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"searchTerm": "movie"}'
 ```
 {
 	"questions": [{
-	          "answer": "Apollo 13", 
+	      "answer": "Apollo 13", 
               "category": 5, 
               "difficulty": 4, 
               "id": 2, 
@@ -215,7 +214,7 @@ GET /categories/<int:id>/questions
 General:
 - Gets questions by category id using url parameters.
 - Returns JSON object with paginated matching questions.
-Sample: curl http://127.0.0.1:5000/categories/1/questions
+-Sample: curl ht&#8203;tp://127.0.0.1:5000/categories/1/questions
  ```
 {
 	'success': True,
@@ -248,15 +247,13 @@ Sample: curl http://127.0.0.1:5000/categories/1/questions
  ```
 POST /quizzes
 General:
-
 - Allows users to play the quiz game.
 - JSON request uses 2 parameters, category and previous questions.
 - Returns JSON object with random question not among previous questions.
-
-Sample: curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [20, 21], "quiz_category": {"type": "Science", "id": "1"}}'
+- Sample: curl ht&#8203;tp://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application/json" -d '{"previous_questions": [20, 21], "quiz_category": {"type": "Science", "id": "1"}}'
  ```
   {
-      "question": {
+     "question": {
           "answer": "Blood", 
           "category": 1, 
           "difficulty": 4, 
