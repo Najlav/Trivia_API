@@ -1,4 +1,4 @@
-#Full Stack Trivia API Project
+# Full Stack Trivia API Project
 
 This project is a game in which players may test their knowledge by answering trivia questions. The project's objective was to build an API and test suite for implementing the following functionality:
 
@@ -8,28 +8,28 @@ This project is a game in which players may test their knowledge by answering tr
 4. Search for questions based on a text query string.
 5. Play the quiz game, randomizing either all questions or within a specific category.
 
-##Getting Started
-###Pre-requisites and Local Development
+## Getting Started
+### Pre-requisites and Local Development
 Developers using this project should already have Python3, pip and node installed on their local machines.
 
-###Backend
+### Backend
 Once setup your virtual environment install the dependencies by running:
 ```
 pip install requirements.txt
 ```
-###frontend
+### frontend
 NPM is used in the project to manage software dependencies install it by running:
 ```
 npm install
 ```
-###Running frontEnd
+### Running frontEnd
 run the terminal:
 ```
 export FLASK_APP=flaskr
 export FLASK_ENV=development
 flask run
 ```
-###running test
+### running test
 run the terminal:
 ```
 dropdb trivia_test
@@ -37,12 +37,12 @@ createdb trivia_test
 psql trivia_test < trivia.psql
 python test_flaskr.py
 ```
-##API Reference
-###Getting Started
+## API Reference
+### Getting Started
 - Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, http://127.0.0.1:5000/, which is set as a proxy in the frontend configuration.
 
 - Authentication: This version of the application does not require authentication or API keys.
-###Error Handling
+### Error Handling
 Errors are returned as JSON in the following format:
 ```
 {
@@ -61,7 +61,7 @@ The API will return two types of errors:
 - 404 – resource not found
 - 422 – unprocessable
 
-###Endpoints
+### Endpoints
 GET /questions
 General:
 - Returns a list of questions objects, categories , success value, and total number of questions
@@ -266,7 +266,7 @@ Sample: curl http://127.0.0.1:5000/quizzes -X POST -H "Content-Type: application
       "success": true
   }
  ```
-##Authors
+## Authors
 The API (__init__.py), test suite (test_flaskr.py), and this README were written by Najla Alshehri.
 Udacity produced all additional project files, including the models and frontend, as a project template for the Full Stack Web Developer Nanodegree.
 
