@@ -35,6 +35,7 @@ class QuestionView extends Component {
       },
       error: (error) => {
         alert('Unable to load questions. Please try your request again')
+        console.log(error)
         return;
       }
     })
