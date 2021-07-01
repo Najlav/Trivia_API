@@ -1,0 +1,5 @@
+backend/.DS_Store
+backend/__pycache__/models.cpython-39.pyc
+backend/flaskr/__pycache__/__init__.cpython-39.pyc
+frontend/.DS_Store
+frontend/src/.DS_Store
