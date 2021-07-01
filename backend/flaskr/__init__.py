@@ -109,13 +109,13 @@ def create_app(test_config=None):
              'total_questions': len(formatted_results)
                  })
         
-       if search_term is None:
-            newQuestion = body.get('question')
-            newAnswer= body.get('answer')
-            newDifficulty = body.get('difficulty')
-            newCategory=  body.get('category')
+    if search_term is None:
+       newQuestion = body.get('question')
+       newAnswer= body.get('answer')
+       newDifficulty = body.get('difficulty')
+       newCategory=  body.get('category')
 
-            if ((newQuestion is not None) and (newAnswer is not None) and (newDifficulty is not None) and (newCategory is not None)):
+       if ((newQuestion is not None) and (newAnswer is not None) and (newDifficulty is not None) and (newCategory is not None)):
               question = Question(question=newQuestion, answer=newAnswer , category=newCategory, difficulty=newDifficulty)
               question.insert()
               return jsonify({
@@ -123,7 +123,7 @@ def create_app(test_config=None):
                 'created': question.id,
                 'question_created': question.question,
                 })
-            else:
+       else:
             # abort 422 if there is empty prameter
                 abort(422)
     
