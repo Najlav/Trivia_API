@@ -171,20 +171,20 @@ def create_app(test_config=None):
          totalQuestions =Question.query.filter(Question.category==currentCategory_ID).all()
          questions = Question.query.filter(Question.id.notin_(previousQuestions)).filter(Question.category==currentCategory_ID).all()
 
-         formatted_Questions = [question.format() for question in questions]
+      formatted_Questions = [question.format() for question in questions]
 
-         #display a new Question if there is more Questions in the choosen category
-         if (len(previousQuestions) != len(totalQuestions)) :
+      #display a new Question if there is more Questions in the choosen category
+      if (len(previousQuestions) != len(totalQuestions)) :
             nextQuestion= random.choice(formatted_Questions)
-         else:
+      else:
             nextQuestion = None
 
-         if (nextQuestion is not None):
+      if (nextQuestion is not None):
             return jsonify({
                             'success': True,
                             'question': nextQuestion
                         })
-         else:
+      else:
             return jsonify({
                         'success': True
                         })
@@ -213,5 +213,7 @@ def create_app(test_config=None):
         }), 404
 
   return app
+
+        
 
         
