@@ -40,7 +40,7 @@ class TriviaTestCase(unittest.TestCase):
 
 
     def test_get_paginated_questions(self):
-         """Tests question pagination success"""
+        """Tests question pagination success"""
 
         res = self.client().get('/questions') 
         data = json.loads(res.data)
@@ -53,7 +53,7 @@ class TriviaTestCase(unittest.TestCase):
 
 
     def test_404_sent_requesting_beyond_vaid_page(self):
-         """Tests question pagination failure 404"""
+        """Tests question pagination failure 404"""
 
         res = self.client().get('/questions?page=9000')
         data = json.loads(res.data)
@@ -98,7 +98,7 @@ class TriviaTestCase(unittest.TestCase):
 
 
     def test_422_Unprocessable_question_creation(self):
-         """Tests question creation failure 422"""
+        """Tests question creation failure 422"""
 
         newQuestion ={
              'question': None,
@@ -118,7 +118,7 @@ class TriviaTestCase(unittest.TestCase):
 
 
     def test_successfull_search(self):
-         """Tests search questions success"""
+        """Tests search questions success"""
 
         res = self.client().post('/questions' , json = {'searchTerm':"movie"})
         data = json.loads(res.data)
@@ -139,7 +139,7 @@ class TriviaTestCase(unittest.TestCase):
 
 
     def test_play_quiz(self):
-         """Tests playing quiz game success"""
+        """Tests playing quiz game success"""
 
         res = self.client().post('/quizzes' , json ={'previous_questions': [20, 21],'quiz_category': {'type': 'Science', 'id': '1'}})
         data = json.loads(res.data)
